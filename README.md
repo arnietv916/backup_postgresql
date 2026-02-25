@@ -63,9 +63,11 @@ gzip -t /backup/pg/*.gz && echo "ALL ARCHIVES OK"
 Лог:
 
 tail -n 200 /var/log/db_backup.log
-# или если нет прав на /var/log:
+
+Или если нет прав на /var/log:
 tail -n 200 ./db_backup.log
-# или если вы задавали LOG_FILE:
+
+Или если вы задавали LOG_FILE:
 tail -n 200 "$HOME/db_backup.log"
 
 Проверка отсутствия мусора после работы
